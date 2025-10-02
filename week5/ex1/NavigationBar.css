@@ -21,5 +21,68 @@ body{
         text-decoration: none;
         color: #fff;
     }
+/* Căn giữa toàn bộ nội dung body */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* căn ngang giữa */
+  text-align: center;  /* căn chữ giữa */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
 
+/* Menu */
+nav#topmenu ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center; /* căn menu giữa */
+  gap: 20px;
+}
+
+nav#topmenu ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+/* Hình ảnh */
+img {
+  margin: 10px 0;
+}
+
+/* Chi tiết */
+details {
+  margin: 10px 0;
+}
+
+/* Video */
+video {
+  margin: 10px 0;
+}
+
+/* Paragraphs */
+p {
+  margin: 5px 0;
+}
+
+/* Màu sắc và định dạng */
+.red-text {
+  color: rgb(202, 6, 39);
+}
+
+.blue-text {
+  color: blue;
+}
+
+.underline-text {
+  text-decoration: underline;
+}
+
+.brown-bg {
+  background-color: brown;
+  color: white;
+  padding: 5px 10px;
+}
     
