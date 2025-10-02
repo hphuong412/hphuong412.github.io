@@ -21,36 +21,15 @@ body{
         text-decoration: none;
         color: #fff;
     }
- body {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* căn ngang giữa các phần tử */
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 20px;
-}
-
-/* H1 giữ vị trí mặc định (trái) */
-h1 {
-  align-self: flex-start; /* h1 nằm về bên trái */
-}
-
-/* Menu */
-nav#topmenu ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  justify-content: center; /* căn menu giữa */
-  gap: 20px;
-}
-
-nav#topmenu ul li a {
-  text-decoration: none;
-  color: black;
-  font-weight: bold;
-}
-
-/* Các phần tử khác căn giữa */
-img, details, video, p {
-  margin: 10px 0;
-}
+ .red-text{
+    color: red;
+ }
+    .blue-text{
+        color: blue;
+    }
+    .underline-text{
+        text-decoration: underline;
+    }
+    .brow-background{
+        background-color: brown;
+    }
