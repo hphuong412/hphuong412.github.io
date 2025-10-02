@@ -32,20 +32,6 @@ body {
   padding: 20px;
 }
 
-/* Menu */
-nav#topmenu ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  justify-content: center; /* căn menu giữa */
-  gap: 20px;
-}
-
-nav#topmenu ul li a {
-  text-decoration: none;
-  color: black;
-  font-weight: bold;
-}
 
 /* Hình ảnh */
 img {
