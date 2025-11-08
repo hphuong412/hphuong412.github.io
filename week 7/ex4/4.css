@@ -19,7 +19,7 @@
 .menu ul {
     list-style: inside url(bullet.png);
     box-shadow: 5px 5px 10px #000;
-    border: 1px solid #000;
+    border: 1px solid #000000;
     width: 148px;
     margin: 0px;
     padding: 0px;
