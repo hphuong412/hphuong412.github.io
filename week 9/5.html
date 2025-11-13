@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Mini Calculator</title>
+    <script>
+        function calculate() {
+            // Lấy các phần tử từ form
+            var a = document.frmCal.txtA;
+            var b = document.frmCal.txtB;
+            var o = document.frmCal.sltO;
+            var r = document.frmCal.txtR;
+
+            // Kiểm tra dữ liệu đầu vào
+            if (a.value === "" || b.value === "") {
+                alert("Vui lòng nhập cả hai số a và b.");
+                r.value = "";
+                if (a.value === "") a.focus();
+                else b.focus();
+                return;
+            }
+
+            // Kiểm tra chia cho 0
+            if ((o.value === "/" || o.value === "%") && parseInt(b.value) === 0) {
+                alert("b không thể bằng 0 khi chia hoặc lấy phần trăm!");
+                r.value = "";
+                b.focus();
+                return;
+            }
+
+            // Tính toán và hiển thị kết quả
+            r.value = eval(a.value + o.value + b.value);
+        }
+    </script>
+</head>
+<body>
+    <form name="frmCal">
+        <table border="0" align="center">
+            <tr>
+                <td colspan="2" align="center">
+                    <h2>MINI CALCULATOR</h2>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">a = </td>
+                <td><input name="txtA" /></td>
+            </tr>
+            <tr>
+                <td align="right">b = </td>
+                <td><input name="txtB" /></td>
+            </tr>
+            <tr>
+                <td align="right">Operator: </td>
+                <td>
+                    <select name="sltO">
+                        <option value="+">+</option>
+                        <option value="-">-</option>
+                        <option value="*">*</option>
+                        <option value="/">/</option>
+                        <option value="%">%</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">Result: </td>
+                <td><input name="txtR" readonly /></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="button" value="Calculate" onclick="calculate()" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
