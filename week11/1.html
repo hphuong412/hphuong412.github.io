@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bảng linh kiện máy tính</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        /* Header Navigation */
+        .header-nav {
+            background-color: #3d3d3d;
+            padding: 15px 0;
+            margin: -20px -20px 30px -20px;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            padding: 0 20px;
+        }
+
+        .nav-container a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        .nav-container a:hover {
+            color: #ffd700;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .menu-toggle {
+            background-color: white;
+            border: 2px solid #333;
+            padding: 8px 16px;
+            font-size: 14px;
+            cursor: pointer;
+            margin-bottom: 30px;
+            border-radius: 4px;
+        }
+
+        .menu-toggle:hover {
+            background-color: #f0f0f0;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        /* Table Styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+            background-color: white;
+        }
+
+        thead {
+            background-color: #f8f8f8;
+        }
+
+        th {
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+            border: 1px solid #ddd;
+            font-size: 16px;
+            color: #333;
+        }
+
+        td {
+            padding: 15px;
+            border: 1px solid #ddd;
+            font-size: 15px;
+            color: #555;
+        }
+
+        tbody tr:hover {
+            background-color: #f9f9f9;
+        }
+
+        .rating {
+            color: #333;
+            font-weight: 500;
+        }
+
+        /* Action Buttons */
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            background-color: white;
+            border: 2px solid #333;
+            padding: 8px 16px;
+            font-size: 14px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #333;
+            color: white;
+        }
+
+        /* Contact Form */
+        .contact-form {
+            background-color: #f9f9f9;
+            padding: 30px;
+            border-radius: 8px;
+            max-width: 900px;
+            margin: 0 auto;
+            border: 1px solid #ddd;
+        }
+
+        .contact-form h2 {
+            font-size: 24px;
+            margin-bottom: 25px;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #333;
+            font-size: 15px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+            font-family: inherit;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #666;
+        }
+
+        .submit-btn {
+            background-color: white;
+            border: 2px solid #333;
+            padding: 10px 24px;
+            font-size: 15px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: #333;
+            color: white;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+
+            table {
+                font-size: 14px;
+            }
+
+            th, td {
+                padding: 10px 8px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            .nav-container {
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Navigation -->
+    <div class="header-nav">
+        <div class="nav-container">
+            <a href="#home">Trang chủ</a>
+            <a href="#books">Sách ©</a>
+            <a href="#price">Tác giả ™</a>
+            <a href="#contact">Liên hệ</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Menu Toggle Button -->
+        <button class="menu-toggle">Ẩn/Hiện Menu</button>
+
+        <!-- Page Title -->
+        <h1>Bảng linh kiện máy tính ©</h1>
+
+        <!-- Components Table -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Tên linh kiện</th>
+                    <th>Giá (VNĐ)</th>
+                    <th>Đánh giá ☆</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>CPU Intel™ Core i5</td>
+                    <td>5000000</td>
+                    <td class="rating">4.5/5</td>
+                </tr>
+                <tr>
+                    <td>RAM DDR4 8GB</td>
+                    <td>800000</td>
+                    <td class="rating">4.0/5</td>
+                </tr>
+                <tr>
+                    <td>Ổ cứng SSD 256GB</td>
+                    <td>1200000</td>
+                    <td class="rating">4.8/5</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Action Buttons -->
+        <div class="action-buttons">
+            <button class="btn" onclick="changeTemplate()">Đổi mẫu chữ</button>
+            <button class="btn" onclick="sortByPrice()">Sắp xếp theo giá</button>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form">
+            <h2>Biểu mẫu liên hệ</h2>
+            <form id="contactForm" onsubmit="handleSubmit(event)">
+                <div class="form-group">
+                    <label for="name">Họ tên:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Tin nhắn:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Gửi</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Menu toggle functionality
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            const nav = document.querySelector('.header-nav');
+            nav.style.display = nav.style.display === 'none' ? 'block' : 'none';
+        });
+
+        // Change font template
+        function changeTemplate() {
+            const body = document.body;
+            const currentFont = body.style.fontFamily;
+            
+            if (currentFont.includes('Segoe UI')) {
+                body.style.fontFamily = 'Arial, sans-serif';
+            } else if (currentFont.includes('Arial')) {
+                body.style.fontFamily = 'Georgia, serif';
+            } else {
+                body.style.fontFamily = "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif";
+            }
+        }
+
+        // Sort table by price
+        function sortByPrice() {
+            const table = document.querySelector('tbody');
+            const rows = Array.from(table.querySelectorAll('tr'));
+            
+            rows.sort((a, b) => {
+                const priceA = parseInt(a.cells[1].textContent);
+                const priceB = parseInt(b.cells[1].textContent);
+                return priceA - priceB;
+            });
+            
+            rows.forEach(row => table.appendChild(row));
+        }
+
+        // Handle form submission
+        function handleSubmit(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            alert(`Cảm ơn bạn đã liên hệ!\n\nThông tin:\nHọ tên: ${name}\nEmail: ${email}\nTin nhắn: ${message}`);
+            
+            // Reset form
+            document.getElementById('contactForm').reset();
+        }
+
+        // Add smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
